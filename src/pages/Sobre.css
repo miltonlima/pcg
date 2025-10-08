@@ -1,0 +1,111 @@
+.sobre-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #22384f, #1e407a);
+  }
+  
+  .sobre-card {
+    background: #fff;
+    width: 400px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .sesc-logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .titulo {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 25px;
+  }
+  
+  .subtitulo {
+    font-size: 14px;
+    color: #1e407a;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .botoes-identidade {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+  
+  .botao {
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    color: #444;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .botao:hover {
+    background-color: #eaeaea;
+  }
+  
+  .botao-ativo {
+    background-color: #1e73be;
+    color: white;
+    border-color: #1e73be;
+  }
+  
+  .secao-cpf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .label-cpf {
+    font-size: 13px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .input-cpf {
+    width: 220px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .botao-prosseguir {
+    width: 230px;
+    padding: 8px;
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .botao-prosseguir:hover {
+    background-color: #dcdcdc;
+  }
+  
+  @media (max-width: 480px) {
+    .sobre-card {
+      width: 90%;
+      padding: 30px 20px;
+    }
+  }
+  
