@@ -1,0 +1,85 @@
+.produtos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #22304b, #0d1a2f);
+    font-family: Arial, sans-serif;
+  }
+  
+  .produtos-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    max-width: 700px;
+    width: 90%;
+    padding: 40px;
+    text-align: left;
+  }
+  
+  .produtos-logo {
+    display: block;
+    margin: 0 auto 10px auto;
+    height: 60px;
+  }
+  
+  .produtos-titulo {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #001f54;
+    margin-bottom: 30px;
+  }
+  
+  .produtos-subtitulo {
+    color: #0047ab;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .produtos-texto {
+    color: #222;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .produtos-texto ol,
+  .produtos-texto ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .produtos-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+  }
+  
+  .btn-imprimir,
+  .btn-token {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .btn-imprimir {
+    background-color: #0047ab;
+  }
+  
+  .btn-token {
+    background-color: #003b8e;
+  }
+  
+  .btn-imprimir:hover {
+    background-color: #003b8e;
+  }
+  
+  .btn-token:hover {
+    background-color: #002c6d;
+  }
+  
