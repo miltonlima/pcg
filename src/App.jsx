@@ -8,10 +8,10 @@ export default function App() {
   return (
     <div>
       <nav style={{ marginBottom: '20px' }}>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/sobre">Sobre</Link> |{" "}
-        <Link to="/produtos">Produtos</Link> |{" "}
-        <Link to="/contato">Contato</Link>
+        <Link to="/">Primeira</Link> |{" "}
+        <Link to="/sobre">Segunda</Link> |{" "}
+        <Link to="/produtos">terceira</Link> |{" "}
+        <Link to="/contato">Quarta</Link>
       </nav>
 
       <Routes>

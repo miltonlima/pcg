@@ -2,110 +2,99 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #22384f, #1e407a);
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1d3557, #457b9d);
+    font-family: Arial, sans-serif;
   }
   
   .sobre-card {
-    background: #fff;
-    width: 400px;
-    padding: 40px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 50px 60px;
+    width: 420px;
     text-align: center;
   }
   
-  .sesc-logo {
-    width: 120px;
-    margin-bottom: 10px;
+  .sobre-logo {
+    height: 60px;
+    margin-bottom: 20px;
   }
   
-  .titulo {
+  .sobre-titulo {
     font-size: 15px;
     font-weight: 500;
-    color: #000;
     margin-bottom: 25px;
+    color: #333;
   }
   
-  .subtitulo {
-    font-size: 14px;
-    color: #1e407a;
+  .sobre-subtitulo {
+    color: #0d47a1;
     font-weight: 600;
     margin-bottom: 10px;
   }
   
-  .botoes-identidade {
+  .sobre-botoes {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 25px;
   }
   
-  .botao {
-    border: 1px solid #ccc;
-    background-color: #f5f5f5;
-    color: #444;
-    font-size: 12px;
-    padding: 5px 12px;
-    border-radius: 10px;
+  .sobre-botao {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 13px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   
-  .botao:hover {
-    background-color: #eaeaea;
+  .sobre-botao:hover {
+    background-color: #cfd8dc;
   }
   
-  .botao-ativo {
-    background-color: #1e73be;
+  .sobre-botao.ativo {
+    background-color: #1565c0;
     color: white;
-    border-color: #1e73be;
   }
   
-  .secao-cpf {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 25px;
-  }
-  
-  .label-cpf {
+  .sobre-label {
+    display: block;
     font-size: 13px;
     color: #333;
-    font-weight: 600;
-    margin-bottom: 8px;
+    text-align: left;
+    margin-bottom: 6px;
   }
   
-  .input-cpf {
-    width: 220px;
-    padding: 7px;
+  .sobre-input {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 13px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-size: 14px;
   }
   
-  .botao-prosseguir {
-    width: 230px;
-    padding: 8px;
-    background-color: #e7e7e7;
+  .sobre-input:focus {
+    border-color: #1565c0;
+    outline: none;
+  }
+  
+  .sobre-prosseguir {
+    background-color: #e0e0e0;
+    color: #000;
     border: none;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #333;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
   }
   
-  .botao-prosseguir:hover {
-    background-color: #dcdcdc;
-  }
-  
-  @media (max-width: 480px) {
-    .sobre-card {
-      width: 90%;
-      padding: 30px 20px;
-    }
+  .sobre-prosseguir:hover {
+    background-color: #1565c0;
+    color: white;
   }
   

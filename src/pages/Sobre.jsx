@@ -1,44 +1,35 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./Sobre.css";
+import logoSesc from "../assets/sesc-logo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Sobre() {
   const navigate = useNavigate();
 
   const handleProsseguir = () => {
-    navigate("/produtos");
+    navigate("/produtos"); // redireciona para a página Produtos.jsx
   };
 
   return (
-    <div className="sobre">
-      <div className="sobre-box">
-        <img src="/sesc-logo.png" alt="Sesc" className="sobre-logo" />
+    <div className="sobre-container">
+      <div className="sobre-card">
+        <img src={logoSesc} alt="SESC" className="sobre-logo" />
+        <h2 className="sobre-titulo">Programa de Comprometimento e Gratuidade (PCG)</h2>
 
-        <h2 className="sobre-titulo">
-          Programa de Comprometimento e Gratuidade (PCG)
-        </h2>
-
-        <div className="sobre-identificacao">
-          <p className="sobre-label-eusou">Eu sou</p>
-          <div className="sobre-botoes">
-            <button className="btn btn-ativo">Maior de 18 anos</button>
-            <button className="btn">Menor de 18 anos</button>
-          </div>
+        <p className="sobre-subtitulo">Eu sou</p>
+        <div className="sobre-botoes">
+          <button className="sobre-botao ativo">Maior de 18 anos</button>
+          <button className="sobre-botao">Menor de 18 anos</button>
         </div>
 
-        <div className="sobre-cpf">
-          <label htmlFor="cpf" className="sobre-label-cpf">
-            Por favor, informe seu CPF:
-          </label>
-          <input
-            type="text"
-            id="cpf"
-            className="sobre-input"
-            placeholder="Informe seu cpf"
-          />
-        </div>
+        <label className="sobre-label">Por favor, informe seu CPF:</label>
+        <input
+          type="text"
+          placeholder="Informe seu CPF"
+          className="sobre-input"
+        />
 
-        <button className="btn-prosseguir" onClick={handleProsseguir}>
+        <button className="sobre-prosseguir" onClick={handleProsseguir}>
           PROSSEGUIR
         </button>
       </div>
