@@ -3,83 +3,71 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: radial-gradient(circle at top, #22304b, #0d1a2f);
+    background: linear-gradient(180deg, #1d3557, #457b9d);
     font-family: Arial, sans-serif;
   }
   
   .produtos-card {
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
-    max-width: 700px;
-    width: 90%;
-    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 50px 60px;
+    width: 700px;
     text-align: left;
   }
   
   .produtos-logo {
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 20px auto;
     height: 60px;
   }
   
   .produtos-titulo {
     text-align: center;
-    font-size: 1.2rem;
-    color: #001f54;
+    font-size: 15px;
     margin-bottom: 30px;
+    color: #333;
   }
   
   .produtos-subtitulo {
-    color: #0047ab;
-    font-weight: bold;
+    color: #1565c0;
     text-align: center;
+    font-weight: 600;
+    font-size: 14px;
     margin-bottom: 20px;
   }
   
   .produtos-texto {
-    color: #222;
-    font-size: 0.95rem;
+    font-size: 13px;
+    color: #333;
     line-height: 1.6;
   }
   
-  .produtos-texto ol,
   .produtos-texto ul {
-    margin-left: 20px;
-    margin-bottom: 10px;
+    padding-left: 20px;
   }
   
   .produtos-botoes {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 15px;
     margin-top: 30px;
   }
   
-  .btn-imprimir,
-  .btn-token {
+  .botao-imprimir,
+  .botao-validar {
+    background-color: #1565c0;
+    color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    color: #fff;
+    padding: 10px 25px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease;
+    font-size: 13px;
   }
   
-  .btn-imprimir {
-    background-color: #0047ab;
-  }
-  
-  .btn-token {
-    background-color: #003b8e;
-  }
-  
-  .btn-imprimir:hover {
-    background-color: #003b8e;
-  }
-  
-  .btn-token:hover {
-    background-color: #002c6d;
+  .botao-imprimir:hover,
+  .botao-validar:hover {
+    background-color: #0d47a1;
   }
   

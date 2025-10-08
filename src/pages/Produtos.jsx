@@ -1,8 +1,15 @@
 import React from "react";
 import "./Produtos.css";
-import sescLogo from "../assets/sesc-logo.png"; // ajuste o caminho conforme sua pasta
+import sescLogo from "../assets/sesc-logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Produtos = () => {
+  const navigate = useNavigate();
+
+  const handleImprimirAssinar = () => {
+    navigate("/contato"); // 👉 redireciona para Contato.jsx
+  };
+
   return (
     <div className="produtos-container">
       <div className="produtos-card">
@@ -15,30 +22,54 @@ const Produtos = () => {
 
         <div className="produtos-texto">
           <p>
-            Eu, &lt;NOME COMPLETO&gt;, nascido no dia &lt;DD/MM/AAAA&gt;, portador do CPF nº XX.XXX.XXX-XX, declaro e atesto que minha renda per capita familiar mensal não ultrapassa o valor de 2 (dois) salários mínimos nacionais, estando, assim, apto(a) a me candidatar/usufruir de uma vaga no Programa de Comprometimento e Gratuidade (PCG) do Serviço Social do Comércio (Sesc), atendendo à condição de baixa renda.
+            Eu, &lt;NOME COMPLETO&gt;, nascido no dia &lt;DD/MM/AAAA&gt;,
+            portador do CPF nº XX.XXX.XXX-XX, declaro e atesto que minha renda
+            per capita familiar mensal não ultrapassa o valor de 2 (dois)
+            salários mínimos nacionais, estando, assim, apto(a) a me
+            candidatar/usufruir de uma vaga no Programa de Comprometimento e
+            Gratuidade (PCG) do Serviço Social do Comércio (Sesc), atendendo à
+            condição de baixa renda.
           </p>
+
           <p>Declaro também que:</p>
-          <ol>
-            <li>Recebi do Sesc todas as informações necessárias...</li>
-            <li>Devo informar ao Sesc caso a renda per capita...</li>
-            <li>Autorizo que o Sesc, em razão de minha participação...</li>
-            <li>Autorizo o uso da minha imagem e voz...</li>
-          </ol>
+          <ul>
+            <li>
+              a) recebi do Sesc todas as informações necessárias para
+              compreensão das condições que me habilitam a me inscrever,
+              inclusive a definição de baixa renda, tendo conhecimento das
+              Normas do Programa de Comprometimento e Gratuidade (PCG).
+            </li>
+            <li>
+              b) devo informar ao Sesc caso a renda per capita familiar mensal
+              ultrapasse 2 (dois) salários mínimos nacionais.
+            </li>
+            <li>
+              c) autorizo que o Sesc, em razão de minha participação no PCG,
+              disponha dos meus dados pessoais e dados pessoais sensíveis, de
+              acordo com a Lei nº 13.709/2018 (LGPD).
+            </li>
+          </ul>
+
           <p>
             Rio de Janeiro, &lt;data atual&gt; de &lt;mês&gt; de &lt;ano&gt;.
           </p>
           <p>
             Para validar sua autodeclaração, você possui 2 alternativas:
+            <br />• Informe seu telefone celular para receber um token de
+            validação.  
+            <br />• Ou imprima a autodeclaração, preencha as informações e
+            assine.
           </p>
-          <ul>
-            <li>Informe seu telefone celular para receber um token de validação.</li>
-            <li>Ou imprima a autodeclaração, preencha e assine, tire uma foto da autodeclaração assinada e faça upload da imagem/foto.</li>
-          </ul>
         </div>
 
         <div className="produtos-botoes">
-          <button className="btn-imprimir">IMPRIMIR E ASSINAR</button>
-          <button className="btn-token">VALIDAR COM TOKEN</button>
+          <button
+            className="botao-imprimir"
+            onClick={handleImprimirAssinar}
+          >
+            IMPRIMIR E ASSINAR
+          </button>
+          <button className="botao-validar">VALIDAR COM TOKEN</button>
         </div>
       </div>
     </div>
