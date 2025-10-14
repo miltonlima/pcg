@@ -2,7 +2,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import Info from './pages/Info'
-import Contato from './pages/Contato'
+import Contato from './pages/Sucesso'
 import Contrato from './pages/Contrato'
 
 export default function App() {
