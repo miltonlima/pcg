@@ -31,8 +31,16 @@ body, #root {
   display: inline-block;
 }
 
+.app-nav a:visited,
+.app-nav a:active,
+.app-nav a:hover {
+  text-decoration: none;
+}
+
 .app-nav a:hover {
   background: #ffe066;
-  color: #024c8d;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  color: #222;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transform: translateY(-2px) scale(1.05);
+  cursor: pointer;
 }
