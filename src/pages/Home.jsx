@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
+import sescLogo from "../assets/sesc-logo.png";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Home() {
     <div className="home-container">
       <div className="card">
         <img
-          src="/sesc-logo.png"
+          src={sescLogo}
           alt="Sesc"
           className="logo"
         />
