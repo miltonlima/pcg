@@ -9,7 +9,7 @@ const Produtos = () => {
   const cpf = location.state?.cpf || "XX.XXX.XXX-XX";
 
   const handleImprimirAssinar = () => {
-    navigate("/contato"); // 👉 redireciona para Contato.jsx
+    navigate("/sucesso"); // 👉 redireciona para Contato.jsx
   };
 
   const meses = [
@@ -84,7 +84,7 @@ const Produtos = () => {
         </div>
 
         <div className="produtos-botoes">
-          <button className="botao-validar" onClick={() => navigate("/sobre")}>
+          <button className="botao-validar" onClick={() => navigate("/info")}>
             VOLTAR
           </button>
           <button

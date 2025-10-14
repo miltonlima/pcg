@@ -35,11 +35,11 @@
   .produtos-subtitulo {
     color: #003366;
     font-weight: 600;
-    text-align: center;
     font-size: 15px;
     margin-bottom: 20px;
     border-left: 4px solid #ffcc00;
     padding-left: 8px;
+    text-align: left;
   }
   
   .produtos-texto {

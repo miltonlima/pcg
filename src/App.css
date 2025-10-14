@@ -29,6 +29,8 @@ body, #root {
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   margin: 0 2px;
   display: inline-block;
+  min-width: 90px;
+  text-align: center;
 }
 
 .app-nav a:visited,
@@ -37,10 +39,4 @@ body, #root {
   text-decoration: none;
 }
 
-.app-nav a:hover {
-  background: #ffe066;
-  color: #222;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  transform: translateY(-2px) scale(1.05);
-  cursor: pointer;
-}
+
