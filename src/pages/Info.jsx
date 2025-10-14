@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Sobre.css";
+import "./Info.css";
 import logoSesc from "../assets/sesc-logo.png";
 import { useNavigate } from "react-router-dom";
 

@@ -9,7 +9,7 @@ export default function Home() {
 
   const handleProsseguir = () => {
     if (aceitouTermos) {
-      navigate("/sobre");
+      navigate("/info");
     }
   };
 
