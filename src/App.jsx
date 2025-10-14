@@ -1,8 +1,9 @@
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import './App.css'
 import Home from './pages/Home'
 import Info from './pages/Info'
 import Contato from './pages/Contato'
-import Produtos from './pages/Produtos'
+import Contrato from './pages/Contrato'
 
 export default function App() {
   const location = useLocation();
@@ -11,17 +12,17 @@ export default function App() {
 
   if (location.pathname === "/info") {
     voltar = "/";
-    avancar = "/produtos";
-  } else if (location.pathname === "/produtos") {
+    avancar = "/contrato";
+  } else if (location.pathname === "/contrato") {
     voltar = "/Info";
     avancar = "/contato";
   } else if (location.pathname === "/contato") {
-    voltar = "/produtos";
+    voltar = "/contrato";
     avancar = "/contato";
   }
 
   return (
-    <div className="center black-board">
+    <div className="">
       <nav className="app-nav">
         <Link to="/">Início</Link>
         <span> | </span>
@@ -35,7 +36,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/info" element={<Info />} />
-        <Route path="/produtos" element={<Produtos />} />
+        <Route path="/contrato" element={<Contrato />} />
         <Route path="/contato" element={<Contato />} />
       </Routes>
     </div>

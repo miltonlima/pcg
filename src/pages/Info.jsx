@@ -17,7 +17,7 @@ export default function Sobre() {
   };
 
   const handleProsseguir = () => {
-    navigate("/produtos", { state: { cpf } });
+    navigate("/contrato", { state: { cpf } });
   };
 
   function isValidCPF(cpf) {

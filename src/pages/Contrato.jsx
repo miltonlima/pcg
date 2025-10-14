@@ -1,5 +1,5 @@
 import React from "react";
-import "./Produtos.css";
+import "./Contrato.css";
 import sescLogo from "../assets/sesc-logo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
