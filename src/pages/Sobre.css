@@ -49,6 +49,30 @@
     margin-bottom: 25px;
   }
   
+  .sobre-botoes-inline {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .sobre-botoes-inline button {
+    flex: 0 1 120px;
+    max-width: 120px;
+    min-width: 90px;
+    height: 44px;
+    font-size: 15px;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .sobre-botao {
     background-color: #e0e0e0;
     border: none;
@@ -66,6 +90,20 @@
   .sobre-botao.ativo {
     background-color: #1565c0;
     color: white;
+  }
+  
+  .botao-validar {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .botao-validar:hover {
+    background-color: #cfd8dc;
   }
   
   .sobre-label {
@@ -109,7 +147,7 @@
   }
   
   .sobre-prosseguir:disabled {
-    background-color: #ccc;
+    background-color: #e0e0e0;
     color: #666;
     cursor: not-allowed;
   }

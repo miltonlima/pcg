@@ -69,7 +69,7 @@ const Contato = () => {
       <div className="contato-card">
         <img src={sescLogo} alt="logo" className="contato-logo" />
         <div className="modal-success-text">
-          Autodeclaração pcg inserida com sucesso
+          Autodeclaração PCG inserida com sucesso
         </div>
         
       </div>

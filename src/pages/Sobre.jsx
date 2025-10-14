@@ -70,14 +70,18 @@ export default function Sobre() {
           onChange={handleCpfChange}
           maxLength={14}
         />
-
-        <button
-          className="sobre-prosseguir"
-          onClick={handleProsseguir}
-          disabled={!isValidCPF(cpf)}
-        >
-          PROSSEGUIR
-        </button>
+        <div className="sobre-botoes-inline">
+          <button className="botao-validar" onClick={() => navigate("/")}>
+            VOLTAR
+          </button>
+          <button
+            className="sobre-prosseguir"
+            onClick={handleProsseguir}
+            disabled={!isValidCPF(cpf)}
+          >
+            PROSSEGUIR
+          </button>
+        </div>
       </div>
     </div>
   );

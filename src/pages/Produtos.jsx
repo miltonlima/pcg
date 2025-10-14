@@ -84,13 +84,15 @@ const Produtos = () => {
         </div>
 
         <div className="produtos-botoes">
+          <button className="botao-validar" onClick={() => navigate("/sobre")}>
+            VOLTAR
+          </button>
           <button
             className="botao-imprimir"
             onClick={handleImprimirAssinar}
           >
-            IMPRIMIR E ASSINAR
+            CONCLUIR
           </button>
-          <button className="botao-validar">VALIDAR COM TOKEN</button>
         </div>
       </div>
     </div>
