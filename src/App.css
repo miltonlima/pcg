@@ -1,0 +1,38 @@
+body, #root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #024c8d, #0072c6);
+}
+
+.app-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.app-nav a {
+  background: #ffd700;
+  color: #222;
+  font-size: 1.12rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 7px 16px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  margin: 0 2px;
+  display: inline-block;
+}
+
+.app-nav a:hover {
+  background: #ffe066;
+  color: #024c8d;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}

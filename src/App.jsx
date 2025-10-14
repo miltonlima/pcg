@@ -22,23 +22,23 @@ export default function App() {
   }
 
   return (
-    <div className="">
+    <div className="center">
       <nav className="app-nav">
-        <Link to="/">Início</Link>
-        <span> | </span>
+        
         <Link to={voltar}>Voltar</Link>
         <span> | </span>
         <Link to={avancar}>Avançar</Link>
-        <span> | </span>
-        <Link to="/contato">Final</Link>
+        
       </nav>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/info" element={<Info />} />
-        <Route path="/contrato" element={<Contrato />} />
-        <Route path="/contato" element={<Contato />} />
-      </Routes>
+      <div className="">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/contrato" element={<Contrato />} />
+          <Route path="/contato" element={<Contato />} />
+        </Routes>
+      </div>
     </div>
   )
 }
