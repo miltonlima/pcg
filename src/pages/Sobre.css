@@ -1,0 +1,129 @@
+.sobre-container {
+    background: linear-gradient(to bottom, #024c8d, #0072c6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 15px;
+    box-sizing: border-box;
+  }
+  
+  .sobre-card {
+    background: #fff;
+    color: #333;
+    max-width: 750px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 40px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sobre-logo {
+    display: block;
+    margin: 0 auto 20px;
+    height: 80px;
+  }
+  
+  .sobre-titulo {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  .sobre-subtitulo {
+    color: #003366;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .sobre-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .sobre-botao {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sobre-botao:hover {
+    background-color: #cfd8dc;
+  }
+  
+  .sobre-botao.ativo {
+    background-color: #1565c0;
+    color: white;
+  }
+  
+  .sobre-label {
+    display: block;
+    font-size: 13px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 6px;
+  }
+  
+  .sobre-input {
+    width: 220px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+  
+  .sobre-input:focus {
+    border-color: #1565c0;
+    outline: none;
+  }
+  
+  .sobre-prosseguir {
+    display: block;
+    width: 220px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #004fa3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .sobre-prosseguir:hover:enabled {
+    background-color: #003366;
+  }
+  
+  .sobre-prosseguir:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 600px) {
+    .sobre-card {
+      padding: 25px;
+    }
+  
+    .sobre-logo {
+      height: 65px;
+    }
+  
+    .sobre-titulo {
+      font-size: 15px;
+    }
+  }
