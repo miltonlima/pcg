@@ -31,9 +31,7 @@ export default function App() {
         {location.pathname !== "/" && (
           <Link to={voltar}>Voltar</Link>
         )}
-        {location.pathname !== "/" && location.pathname !== "/sucesso" && (
-          <span> | </span>
-        )}
+        
 
         {location.pathname !== "/sucesso" && (
           <Link to={avancar}>Avançar</Link>
