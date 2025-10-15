@@ -2,8 +2,8 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import Info from './pages/Info'
-import Contato from './pages/Contrato'
 import Contrato from './pages/Contrato'
+import Sucesso from './pages/Sucesso'
 
 export default function App() {
   const location = useLocation();
@@ -18,8 +18,12 @@ export default function App() {
     avancar = "/sucesso";
   } else if (location.pathname === "/contato") {
     voltar = "/contrato";
-    avancar = "/contato";
+    avancar = "/contrato";
+  } else if (location.pathname === "/sucesso") {
+    voltar = "/contrato";
+    avancar = "/sucesso";
   }
+
 
   return (
     <div className="center">
@@ -36,7 +40,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/info" element={<Info />} />
           <Route path="/contrato" element={<Contrato />} />
-          <Route path="/contato" element={<Contato />} />
+          <Route path="/sucesso" element={<Sucesso />} />
         </Routes>
       </div>
     </div>
