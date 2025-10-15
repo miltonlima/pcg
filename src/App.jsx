@@ -29,12 +29,15 @@ export default function App() {
     <div className="center">
       <nav className="app-nav">
         {location.pathname !== "/" && (
-          <>
-            <Link to={voltar}>Voltar</Link><span> | </span>
-          </>
+          <Link to={voltar}>Voltar</Link>
         )}
-        
-        <Link to={avancar}>Avançar</Link>
+        {location.pathname !== "/" && location.pathname !== "/sucesso" && (
+          <span> | </span>
+        )}
+
+        {location.pathname !== "/sucesso" && (
+          <Link to={avancar}>Avançar</Link>
+        )}
       </nav>
 
       <div className="">
