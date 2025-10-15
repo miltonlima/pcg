@@ -15,7 +15,7 @@ export default function App() {
     avancar = "/contrato";
   } else if (location.pathname === "/contrato") {
     voltar = "/Info";
-    avancar = "/contato";
+    avancar = "/sucesso";
   } else if (location.pathname === "/contato") {
     voltar = "/contrato";
     avancar = "/contato";
