@@ -1,4 +1,4 @@
-import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import './App.css'
 import Home from './pages/Home'
@@ -31,17 +31,7 @@ export default function App() {
 
   return (
     <div className="center">
-      <nav className="app-nav">
-        {location.pathname !== "/" && (
-          <Link to={voltar}>Voltar</Link>
-        )}
-        {(location.pathname !== "/sucesso" && (
-          location.pathname !== "/info" || cpfValido
-        )) && (
-          <Link to={avancar} state={{ cpf }}>Avançar</Link>
-        )}
-      </nav>
-
+      {/* navegação removida — os botões do topo não aparecem */}
       <div className="">
         <Routes>
           <Route path="/" element={<Home />} />

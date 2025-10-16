@@ -34,6 +34,8 @@ export default function Info({ setCpfValido, cpf, setCpf }) {
     navigate("/contrato", { state: { cpf } });
   };
 
+  const cpfEstaValido = validarCpf(cpf); // novo: checagem local para controle de exibição
+
   return (
     <div className="sobre-container">
       <div className="sobre-card">
@@ -71,13 +73,14 @@ export default function Info({ setCpfValido, cpf, setCpf }) {
           <button className="botao-validar" onClick={() => navigate("/")}>
             VOLTAR
           </button>
-          <button
-            className="sobre-prosseguir"
-            onClick={handleProsseguir}
-            disabled={!validarCpf(cpf)}
-          >
-            PROSSEGUIR
-          </button>
+          {cpfEstaValido && (
+            <button
+              className="sobre-prosseguir"
+              onClick={handleProsseguir}
+            >
+              PROSSEGUIR
+            </button>
+          )}
         </div>
       </div>
     </div>
