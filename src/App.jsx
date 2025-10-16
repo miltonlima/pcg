@@ -1,4 +1,5 @@
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import { useState } from 'react'
 import './App.css'
 import Home from './pages/Home'
 import Info from './pages/Info'
@@ -7,6 +8,9 @@ import Sucesso from './pages/Sucesso'
 
 export default function App() {
   const location = useLocation();
+  const [cpfValido, setCpfValido] = useState(false);
+  const [cpf, setCpf] = useState(""); // novo estado para CPF
+
   let voltar = "/";
   let avancar = "/info";
 
@@ -31,17 +35,17 @@ export default function App() {
         {location.pathname !== "/" && (
           <Link to={voltar}>Voltar</Link>
         )}
-        
-
-        {location.pathname !== "/sucesso" && (
-          <Link to={avancar}>Avançar</Link>
+        {(location.pathname !== "/sucesso" && (
+          location.pathname !== "/info" || cpfValido
+        )) && (
+          <Link to={avancar} state={{ cpf }}>Avançar</Link>
         )}
       </nav>
 
       <div className="">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/info" element={<Info />} />
+          <Route path="/info" element={<Info setCpfValido={setCpfValido} cpf={cpf} setCpf={setCpf} />} />
           <Route path="/contrato" element={<Contrato />} />
           <Route path="/sucesso" element={<Sucesso />} />
         </Routes>

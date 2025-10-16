@@ -3,39 +3,36 @@ import "./Info.css";
 import logoSesc from "../assets/sesc-logo.png";
 import { useNavigate } from "react-router-dom";
 
-export default function Sobre() {
+function validarCpf(cpf) {
+  cpf = cpf.replace(/[^\d]+/g, "");
+  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+  let soma = 0,
+    resto;
+  for (let i = 1; i <= 9; i++) soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.substring(9, 10))) return false;
+  soma = 0;
+  for (let i = 1; i <= 10; i++) soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.substring(10, 11))) return false;
+  return true;
+}
+
+export default function Info({ setCpfValido, cpf, setCpf }) {
   const navigate = useNavigate();
-  const [cpf, setCpf] = useState("");
   const [maiorIdade, setMaiorIdade] = useState(true);
 
   const handleCpfChange = (e) => {
-    let value = e.target.value.replace(/\D/g, "");
-    value = value.replace(/(\d{3})(\d)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-    setCpf(value);
+    const novoCpf = e.target.value.replace(/\D/g, "");
+    setCpf(novoCpf);
+    setCpfValido(validarCpf(novoCpf));
   };
 
   const handleProsseguir = () => {
     navigate("/contrato", { state: { cpf } });
   };
-
-  function isValidCPF(cpf) {
-    cpf = cpf.replace(/\D/g, "");
-    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
-    let sum = 0,
-      rest;
-    for (let i = 1; i <= 9; i++) sum += parseInt(cpf[i - 1]) * (11 - i);
-    rest = (sum * 10) % 11;
-    if (rest === 10 || rest === 11) rest = 0;
-    if (rest !== parseInt(cpf[9])) return false;
-    sum = 0;
-    for (let i = 1; i <= 10; i++) sum += parseInt(cpf[i - 1]) * (12 - i);
-    rest = (sum * 10) % 11;
-    if (rest === 10 || rest === 11) rest = 0;
-    if (rest !== parseInt(cpf[10])) return false;
-    return true;
-  }
 
   return (
     <div className="sobre-container">
@@ -77,7 +74,7 @@ export default function Sobre() {
           <button
             className="sobre-prosseguir"
             onClick={handleProsseguir}
-            disabled={!isValidCPF(cpf)}
+            disabled={!validarCpf(cpf)}
           >
             PROSSEGUIR
           </button>
