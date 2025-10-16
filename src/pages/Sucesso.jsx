@@ -23,7 +23,7 @@ const SuccessModal = ({ open, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="modal-success-text">
-          Autodeclaração pcg inserida com sucesso!
+          Autodeclaração pcg inserida com sucesso
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@ const Contato = () => {
       <div className="contato-card">
         <img src={sescLogo} alt="logo" className="contato-logo" />
         <div className="modal-success-text">
-          Autodeclaração pcg inserida com sucesso
+          Autodeclaração pcg inserida com sucesso!
         </div>
       </div>
     </div>
